@@ -8,4 +8,10 @@ public class Value implements Expression {
     public Value(int value) {
         this.value = value;
     }
+
+    @Override
+    public <T> T accept(ExpressionVisitor<T> visitor) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

@@ -9,4 +9,10 @@ public class Variable implements Expression {
     public Variable(String name) {
         this.name = name;
     }
+
+    @Override
+    public <T> T accept(ExpressionVisitor<T> visitor) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }
