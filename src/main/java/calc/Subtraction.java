@@ -1,5 +1,7 @@
 package calc;
 
+import java.util.Map;
+
 public class Subtraction extends Binary {
 
     public Subtraction(Expression lhs, Expression rhs) {
@@ -8,7 +10,6 @@ public class Subtraction extends Binary {
 
     @Override
     public <T> T accept(ExpressionVisitor<T> visitor) {
-        // TODO Auto-generated method stub
-        return null;
+        return visitor.visitSubtraction(this);
     }
 }

@@ -1,5 +1,7 @@
 package calc;
 
+import java.util.Map;
+
 public class Multiplication extends Binary implements Associative {
 
     public Multiplication(Expression lhs, Expression rhs) {
@@ -8,7 +10,6 @@ public class Multiplication extends Binary implements Associative {
 
     @Override
     public <T> T accept(ExpressionVisitor<T> visitor) {
-        // TODO Auto-generated method stub
-        return null;
+        return visitor.visitMultiplication(this);
     }
 }

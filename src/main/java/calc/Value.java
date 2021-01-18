@@ -3,7 +3,7 @@ package calc;
 import java.util.Map;
 
 public class Value implements Expression {
-    private final int value;
+    final int value;
 
     public Value(int value) {
         this.value = value;
@@ -11,7 +11,6 @@ public class Value implements Expression {
 
     @Override
     public <T> T accept(ExpressionVisitor<T> visitor) {
-        // TODO Auto-generated method stub
-        return null;
+        return visitor.visitValue(this);
     }
 }

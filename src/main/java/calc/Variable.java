@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class Variable implements Expression {
 
-    private final String name;
+    final String name;
 
     public Variable(String name) {
         this.name = name;
@@ -12,7 +12,6 @@ public class Variable implements Expression {
 
     @Override
     public <T> T accept(ExpressionVisitor<T> visitor) {
-        // TODO Auto-generated method stub
-        return null;
+        return visitor.visitVariable(this);
     }
 }

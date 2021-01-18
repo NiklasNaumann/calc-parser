@@ -1,5 +1,7 @@
 package calc;
 
+import java.util.Map;
+
 public class Division extends Binary {
 
     public Division(Expression lhs, Expression rhs) {
@@ -8,7 +10,6 @@ public class Division extends Binary {
 
     @Override
     public <T> T accept(ExpressionVisitor<T> visitor) {
-        // TODO Auto-generated method stub
-        return null;
+        return visitor.visitDivision(this);
     }
 }
