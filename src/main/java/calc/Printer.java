@@ -4,22 +4,22 @@ public class Printer implements ExpressionVisitor<String>{
 
     @Override
     public String visitAddition(Addition addition) {
-        return brackets(addition, addition.lhs, false) + " + " + brackets(addition, addition.rhs, !(this instanceof Associative));
+        return brackets(addition, addition.lhs, false) + " + " + brackets(addition, addition.rhs, false);
     }
 
     @Override
     public String visitSubtraction(Subtraction subtraction) {
-        return brackets(subtraction, subtraction.lhs, false) + " - " + brackets(subtraction, subtraction.rhs, !(this instanceof Associative));
+        return brackets(subtraction, subtraction.lhs, false) + " - " + brackets(subtraction, subtraction.rhs, true);
     }
 
     @Override
     public String visitMultiplication(Multiplication multiplication) {
-        return brackets(multiplication, multiplication.lhs, false) + " * " + brackets(multiplication, multiplication.rhs, !(this instanceof Associative));
+        return brackets(multiplication, multiplication.lhs, false) + " * " + brackets(multiplication, multiplication.rhs, false);
     }
 
     @Override
     public String visitDivision(Division division) {
-        return brackets(division, division.lhs, false) + " / " + brackets(division, division.rhs, !(this instanceof Associative));
+        return brackets(division, division.lhs, false) + " / " + brackets(division, division.rhs, true);
     }
 
     @Override

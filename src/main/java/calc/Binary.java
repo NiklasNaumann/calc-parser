@@ -1,7 +1,5 @@
 package calc;
 
-import java.util.Map;
-
 public abstract class Binary implements Expression {
     final Expression lhs;
     final Expression rhs;

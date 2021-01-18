@@ -1,7 +1,5 @@
 package calc;
 
-import java.util.Map;
-
 public class Subtraction extends Binary {
 
     public Subtraction(Expression lhs, Expression rhs) {

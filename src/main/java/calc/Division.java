@@ -1,7 +1,5 @@
 package calc;
 
-import java.util.Map;
-
 public class Division extends Binary {
 
     public Division(Expression lhs, Expression rhs) {

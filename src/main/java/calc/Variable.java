@@ -1,7 +1,5 @@
 package calc;
 
-import java.util.Map;
-
 public class Variable implements Expression {
 
     final String name;

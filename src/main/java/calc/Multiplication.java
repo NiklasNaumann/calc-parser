@@ -1,7 +1,5 @@
 package calc;
 
-import java.util.Map;
-
 public class Multiplication extends Binary implements Associative {
 
     public Multiplication(Expression lhs, Expression rhs) {

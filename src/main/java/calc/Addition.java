@@ -1,7 +1,5 @@
 package calc;
 
-import java.util.Map;
-
 public class Addition extends Binary implements Associative {
 
     public Addition(Expression lhs, Expression rhs) {
