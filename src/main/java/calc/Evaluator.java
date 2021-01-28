@@ -12,22 +12,22 @@ public class Evaluator implements ExpressionVisitor<Integer> {
 
     @Override
     public Integer visitAddition(Addition addition) {
-        return Evaluator.evaluate(addition.lhs, variables) + Evaluator.evaluate(addition.rhs, variables);
+        return evaluate(addition.lhs, variables) + evaluate(addition.rhs, variables);
     }
 
     @Override
     public Integer visitSubtraction(Subtraction subtraction) {
-        return Evaluator.evaluate(subtraction.lhs, variables) - Evaluator.evaluate(subtraction.rhs, variables);
+        return evaluate(subtraction.lhs, variables) - evaluate(subtraction.rhs, variables);
     }
 
     @Override
     public Integer visitMultiplication(Multiplication multiplication) {
-        return Evaluator.evaluate(multiplication.lhs, variables) * Evaluator.evaluate(multiplication.rhs, variables);
+        return evaluate(multiplication.lhs, variables) * evaluate(multiplication.rhs, variables);
     }
 
     @Override
     public Integer visitDivision(Division division) {
-        return Evaluator.evaluate(division.lhs, variables) / Evaluator.evaluate(division.rhs, variables);
+        return evaluate(division.lhs, variables) / evaluate(division.rhs, variables);
     }
 
     @Override
